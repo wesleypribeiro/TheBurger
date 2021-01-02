@@ -83,12 +83,13 @@ nav article.on {
     font-size: 18px;
 }
 
-.add {
+.add, #finish, #newOrder {
     cursor: pointer;
     background-color: gold;
     padding: 10px 20px;
     border-radius: 50px;
     border: none;
+    margin-bottom: 2%;
 }
 
 footer {
@@ -104,8 +105,7 @@ footer hr {
     margin-bottom: 10px;
 }
 
-#total {
-    margin-right: 20px;
+#total, #order {
     display: none;
 }
 
@@ -115,6 +115,7 @@ footer hr {
 }
 
 .position {
+    display: flex;
     justify-content: space-between;
 }
 

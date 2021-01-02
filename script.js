@@ -3,13 +3,29 @@ let drinkBtn = document.querySelector('#drink');
 let dessertBtn = document.querySelector('#dessert');
 let itemList = document.querySelector('#itemList');
 let cart = document.querySelector('#cart');
-
-let total = 0;
+let finishBtn = document.querySelector('#finish');
 let totalText = document.querySelector('#total');
 let totalValue = document.querySelector('#totalValue');
+let order = document.querySelector('#order');
 let removeAllBtn = document.querySelector('#removeAll');
+let total = 0;
 
-removeAllBtn.addEventListener('click', () => {
+removeAllBtn.addEventListener('click', newOrderFunction);
+
+finishBtn.addEventListener('click', () => {
+  cart.style.textAlign = 'center';
+  cart.innerHTML = `
+  <h1>Seu pedido foi enviado para cozinha!</h1>
+  <p>Em breve estará pronto</p>
+  <button id='newOrder'>Novo pedido</button>
+  `;
+  let newOrder = document.querySelector('#newOrder');
+  newOrder.addEventListener('click', newOrderFunction);
+  totalText.style.display = 'none';
+  order.style.display = 'none';
+});
+
+function newOrderFunction() {
   food.forEach(item => {
     item.quantidade = 0;
   })
@@ -23,6 +39,7 @@ removeAllBtn.addEventListener('click', () => {
   })
 
   totalText.style.display = 'none';
+  order.style.display = 'none';
   cart.style.textAlign = 'center';
   cart.innerHTML = `
   <h1>CARRINHO DE COMPRAS</h1>
@@ -30,7 +47,7 @@ removeAllBtn.addEventListener('click', () => {
   `;
 
   total = 0;
-})
+}
 
 foodBtn.addEventListener('click', () => {
   itemList.innerHTML = '';
@@ -69,7 +86,7 @@ foodBtn.addEventListener('click', () => {
     itemList.appendChild(itemMenu);
   });
 
-  var buttons = document.getElementsByClassName('add');
+  let buttons = document.getElementsByClassName('add');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
       food[i].quantidade++;
@@ -112,7 +129,7 @@ drinkBtn.addEventListener('click', () => {
     itemList.appendChild(itemMenu);
   });
 
-  var buttons = document.getElementsByTagName('button');
+  let buttons = document.getElementsByClassName('add');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
       drink[i].quantidade++;
@@ -155,7 +172,7 @@ dessertBtn.addEventListener('click', () => {
     itemList.appendChild(itemMenu);
   });
 
-  var buttons = document.getElementsByTagName('button');
+  let buttons = document.getElementsByClassName('add');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
       dessert[i].quantidade++;
@@ -171,8 +188,10 @@ function refreshCart() {
   cart.innerHTML = '';
   food.map(item => {
     if (item.quantidade > 0) {
-      totalText.style.display = 'flex';
-      totalText.className = 'position';
+      totalText.style.display = 'block';
+      totalText.style.textAlign = 'right';
+      order.style.display = 'flex';
+      order.className = 'position';
       totalValue.innerText = `${total}`;
       cart.innerHTML += `
       <p><strong>${item.name}</strong></p>
@@ -185,8 +204,10 @@ function refreshCart() {
 
   drink.map(item => {
     if (item.quantidade > 0) {
-      totalText.style.display = 'flex';
-      totalText.className = 'position';
+      totalText.style.display = 'block';
+      totalText.style.textAlign = 'right';
+      order.style.display = 'flex';
+      order.className = 'position';
       totalValue.innerText = `${total}`;
       cart.innerHTML += `
       <p><strong>${item.name}</strong></p>
@@ -199,8 +220,10 @@ function refreshCart() {
 
   dessert.map(item => {
     if (item.quantidade > 0) {
-      totalText.style.display = 'flex';
-      totalText.className = 'position';
+      totalText.style.display = 'block';
+      totalText.style.textAlign = 'right';
+      order.style.display = 'flex';
+      order.className = 'position';
       totalValue.innerText = `${total}`;
       cart.innerHTML += `
       <p><strong>${item.name}</strong></p>
@@ -213,19 +236,19 @@ function refreshCart() {
 }
 
 const food = [
-  { name: 'Classic', preco: 30, img: '/img/classic.jpg', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
-  { name: 'Double', preco: 45, img: '/img/double.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
-  { name: 'Salad', preco: 35, img: '/img/salad.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Classic', preco: 30, img: 'img/classic.jpg', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Double', preco: 45, img: 'img/double.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Salad', preco: 35, img: 'img/salad.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
 ]
 
 const drink = [
-  { name: 'Coca-cola', preco: 10, img: '/img/coke.jpg', quantidade: 0 },
-  { name: 'Suco', preco: 5, img: '/img/juice.jpg', quantidade: 0 },
-  { name: 'Agua', preco: 5, img: '/img/water.jpg', quantidade: 0 },
+  { name: 'Coca-cola', preco: 10, img: 'img/coke.jpg', quantidade: 0 },
+  { name: 'Suco', preco: 5, img: 'img/juice.jpg', quantidade: 0 },
+  { name: 'Agua', preco: 5, img: 'img/water.jpg', quantidade: 0 },
 ]
 
 const dessert = [
-  { name: 'Brownie', preco: 10, img: '/img/brownie.png', quantidade: 0 },
-  { name: 'Sundae', preco: 5, img: '/img/sundae.png', quantidade: 0 },
-  { name: 'Casquinha', preco: 5, img: '/img/icecream.jpg', quantidade: 0 },
+  { name: 'Brownie', preco: 10, img: 'img/brownie.png', quantidade: 0 },
+  { name: 'Sundae', preco: 5, img: 'img/sundae.png', quantidade: 0 },
+  { name: 'Casquinha', preco: 5, img: 'img/icecream.jpg', quantidade: 0 },
 ]
