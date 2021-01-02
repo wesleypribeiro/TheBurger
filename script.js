@@ -236,19 +236,19 @@ function refreshCart() {
 }
 
 const food = [
-  { name: 'Classic', preco: 30, img: 'img/classic.jpg', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
-  { name: 'Double', preco: 45, img: 'img/double.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
-  { name: 'Salad', preco: 35, img: 'img/salad.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Classic', preco: 30, img: 'TheBurguer/img/classic.jpg', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Double', preco: 45, img: 'TheBurguer/img/double.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Salad', preco: 35, img: 'TheBurguer/img/salad.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
 ]
 
 const drink = [
-  { name: 'Coca-cola', preco: 10, img: 'img/coke.jpg', quantidade: 0 },
-  { name: 'Suco', preco: 5, img: 'img/juice.jpg', quantidade: 0 },
-  { name: 'Agua', preco: 5, img: 'img/water.jpg', quantidade: 0 },
+  { name: 'Coca-cola', preco: 10, img: 'TheBurguer/img/coke.jpg', quantidade: 0 },
+  { name: 'Suco', preco: 5, img: 'TheBurguer/img/juice.jpg', quantidade: 0 },
+  { name: 'Agua', preco: 5, img: 'TheBurguer/img/water.jpg', quantidade: 0 },
 ]
 
 const dessert = [
-  { name: 'Brownie', preco: 10, img: 'img/brownie.png', quantidade: 0 },
-  { name: 'Sundae', preco: 5, img: 'img/sundae.png', quantidade: 0 },
-  { name: 'Casquinha', preco: 5, img: 'img/icecream.jpg', quantidade: 0 },
+  { name: 'Brownie', preco: 10, img: 'TheBurguer/img/brownie.png', quantidade: 0 },
+  { name: 'Sundae', preco: 5, img: 'TheBurguer/img/sundae.png', quantidade: 0 },
+  { name: 'Casquinha', preco: 5, img: 'TheBurguer/img/icecream.jpg', quantidade: 0 },
 ]
