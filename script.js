@@ -242,13 +242,13 @@ const food = [
 ]
 
 const drink = [
-  { name: 'Coca-cola', preco: 10, img: 'TheBurguer/img/coke.jpg', quantidade: 0 },
-  { name: 'Suco', preco: 5, img: 'TheBurguer/img/juice.jpg', quantidade: 0 },
-  { name: 'Agua', preco: 5, img: 'TheBurguer/img/water.jpg', quantidade: 0 },
+  { name: 'Coca-cola', preco: 10, img: 'img/coke.jpg', quantidade: 0 },
+  { name: 'Suco', preco: 5, img: 'img/juice.jpg', quantidade: 0 },
+  { name: 'Agua', preco: 5, img: 'img/water.jpg', quantidade: 0 },
 ]
 
 const dessert = [
-  { name: 'Brownie', preco: 10, img: 'TheBurguer/img/brownie.png', quantidade: 0 },
-  { name: 'Sundae', preco: 5, img: 'TheBurguer/img/sundae.png', quantidade: 0 },
-  { name: 'Casquinha', preco: 5, img: 'TheBurguer/img/icecream.jpg', quantidade: 0 },
+  { name: 'Brownie', preco: 10, img: 'img/brownie.png', quantidade: 0 },
+  { name: 'Sundae', preco: 5, img: 'img/sundae.png', quantidade: 0 },
+  { name: 'Casquinha', preco: 5, img: 'img/icecream.jpg', quantidade: 0 },
 ]
