@@ -236,9 +236,9 @@ function refreshCart() {
 }
 
 const food = [
-  { name: 'Classic', preco: 30, img: 'TheBurguer/img/classic.jpg', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
-  { name: 'Double', preco: 45, img: 'TheBurguer/img/double.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
-  { name: 'Salad', preco: 35, img: 'TheBurguer/img/salad.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Classic', preco: 30, img: 'img/classic.jpg', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Double', preco: 45, img: 'img/double.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
+  { name: 'Salad', preco: 35, img: 'img/salad.png', description: 'Pão, Hamburguer 120g, queijo prato e picles', quantidade: 0 },
 ]
 
 const drink = [
